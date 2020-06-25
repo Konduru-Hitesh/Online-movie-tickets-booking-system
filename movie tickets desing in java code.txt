@@ -1,0 +1,158 @@
+import java.util.Scanner;
+
+class seatbook {
+
+    private String Movie_Name;
+    private String Theater_Name;
+ 
+    private int cost;
+
+    void movies() {
+     
+        System.out.println("the movies available are");
+        System.out.println(" 1.Ala VaikuntaPuramulo-------- Rs.200\n 2.Darbar - Rs.150 \n 3.SarileruNekevvaru ---- Rs.160 \n 4.EnthaManchivaadivira ----- Rs.70 ");
+     
+     
+    }
+
+}
+
+class thea extends seatbook {
+private int no_f_tickets;
+    void th() {
+        System.out.println("theaters Avalible in Naidupeta // **Sri Venkateswara,CS Teja,Murari,Srinivasa**");
+        int S;
+        int CS;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if (n == 1) {
+            System.out.println("*******Sri Venkateswra theater*******");
+            System.out.println("*******select a movie*******");
+            System.out.println("movie available are \n 1.Ala Vaikuntapuramulo \n 2.Darbar ");
+            Scanner a = new Scanner(System.in);
+            int o = a.nextInt();
+            if (o == 1) {
+                System.out.println("Ala Vaikuntapuramulo @ Sri Venkateswra theater");
+                System.out.println("enter the number of tickets to be booked");
+                Scanner j = new Scanner(System.in);
+                int r = j.nextInt();
+                int left= no_f_tickets-r;
+                int amount=40*r;
+                System.out.println("to continue to book for this movie prees 1");
+                Scanner d = new Scanner(System.in);
+                int h = d.nextInt();
+                System.out.println("\n\n\n");
+                if (h == 1) {
+                    System.out.println("******************************************************");
+                    System.out.println("theater ------------------- Sri Venkateswra theater");
+                    System.out.println("movie --------------------- Ala Vaikuntapuramulo");
+                    System.out.println("cost ---------------------- Rs."+amount);
+                    System.out.println("******************************************************");
+                }
+
+            }
+            if (o == 2) {
+                System.out.println("Darbar @CS Teja");
+                 System.out.println("enter the number of tickets to be booked");
+                Scanner j = new Scanner(System.in);
+                int r = j.nextInt();
+                int left= no_f_tickets-r;
+                int amount=50*r;
+                System.out.println("to continue to book for this movie prees 1");
+                Scanner d = new Scanner(System.in);
+                int h = d.nextInt();
+                System.out.println("\n\n\n");
+                if (h == 1) {
+                    System.out.println("******************************************************");
+                    System.out.println("theater ------------------- CS Teja");
+                    System.out.println("movie --------------------- Darbar");
+                    System.out.println("cost ---------------------- Rs"+amount);
+                    System.out.println("******************************************************");
+                }
+
+            }
+
+        }
+        if (n == 2) {
+            System.out.println("*******Murari*******");
+            System.out.println("*******select a movie*******");
+            System.out.println("movie available are \n 3.SarileruNekevvaru \n 4.EnthaManchivaadivira");
+            Scanner b = new Scanner(System.in);
+            int p = b.nextInt();
+            Scanner a = new Scanner(System.in);
+            int o = a.nextInt();
+            if (o == 1) {
+                System.out.println("SarileruNekevvaru @ Murari");
+                 System.out.println("enter the number of tickets to be booked");
+                Scanner j = new Scanner(System.in);
+                int r = j.nextInt();
+                int left= no_f_tickets-r;
+                int amount=60*r;
+                System.out.println("to continue to book for this movie prees 1");
+                Scanner d = new Scanner(System.in);
+                int h = d.nextInt();
+                System.out.println("\n\n\n");
+                if (h == 1) {
+                    System.out.println("******************************************************");
+                    System.out.println("theater ------------------- anna theater");
+                    System.out.println("movie --------------------- game movie");
+                    System.out.println("cost ---------------------- Rs."+amount);
+                    System.out.println("******************************************************");
+                }
+
+            }
+            if (o == 2) {
+                System.out.println("EnthaManchivaadivira @Murari");
+                 System.out.println("enter the number of tickets to be booked");
+                Scanner j = new Scanner(System.in);
+                int r = j.nextInt();
+                int left= no_f_tickets-r;
+                int amount=70*r;
+                System.out.println("to continue to book for this movie prees 1");
+                Scanner d = new Scanner(System.in);
+                int h = d.nextInt();
+                System.out.println("\n\n\n");
+                if (h == 1) {
+                    System.out.println("******************************************************");
+                    System.out.println("theater ------------------- Murari");
+                    System.out.println("movie --------------------- EnthaManchivaadivira");
+                    System.out.println("cost ---------------------- Rs."+amount);
+                    System.out.println("******************************************************");
+                }
+
+            }
+        }
+
+    }
+}
+
+public class seatbook {
+
+    public static void main(String[] args) {
+        BookMyshow ob = new BookMyshow();
+
+        BookMyshow[] moviename = new BookMyshow[2];
+        moviename[0] = ob;
+        thea a = new thea();
+        moviename[1] = a;
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+        System.out.println("---------1.list of movies and their prices--------- \n-------2.acces and book tickets through theaters---");
+
+        System.out.println("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        Scanner d = new Scanner(System.in);
+        int h = d.nextInt();
+        switch (h) {
+            case 1: {
+                ob.movies();
+                break;
+            }
+            case 2: {
+             
+                a.th();
+            }
+        }
+
+    }
+
+}
